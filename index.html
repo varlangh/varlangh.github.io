@@ -1,0 +1,158 @@
+Илюша, [01.11.2025 21:24]
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Илья Максимчук - Школьник</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="fade-in">
+        <img
+          src="photo_2025-11-01_18-42-18.jpg"
+          alt="Фото ученика"
+          class="profile-img"
+        />
+        <h1>Илья Максимчук</h1>
+        <p class="subtitle">Ученик 9 класса | Будущий инжинер</p>
+      </header>
+
+      <!-- About -->
+      <section class="scroll-animate">
+        <h2>Обо мне</h2>
+        <div class="about-text">
+          <p>
+            Привет! Меня зовут Илья, я учусь в 9 классе 
+            . Увлекаюсь программированием, математикой .
+          </p>
+          <p>
+            В будущем мечтаю стать инжинером и создавать что то полезное
+            . Участвую в олимпиадах по информатике и математике.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="scroll-animate">
+        <h2>Навыки и интересы</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>📚 Школьные предметы</h3>
+            <ul>
+              <li>Математика</li>
+              <li>География</li>
+              <li>Физика</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>💻 Программирование</h3>
+            <ul>
+              <li>Python</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>🎯 Хобби</h3>
+            <ul>
+              <li>велосипед</li>
+              <li>игры</li>
+              <li>рыбалка</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section class="scroll-animate">
+        <h2>Достижения</h2>
+        <div class="achievements">
+          <div class="achievement-card">
+            <i class="fas fa-trophy"></i>
+            <h3>Призер олимпиады</h3>
+            <p>муниципальный этап по физике</p>
+          </div>
+          <div class="achievement-card">
+            <i class="fas fa-code"></i>
+            <h3>Проекты</h3>
+            <p>Разработал несколько веб-сайтов и мобильных приложений</p>
+          </div>
+          <div class="achievement-card">
+            <i class="fas fa-language"></i>
+            <h3>Английский язык</h3>
+            <p>Сертификат призера английский бульдог</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="scroll-animate">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Gmail</strong>
+              <p>maksimchuk16072010ilya</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Телефон</strong>
+              <p><a href="https://t.me/Varlan_Ilya"></a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-vk"></i>
+            <div>
+              <strong>ВКонтакте</strong>
+              <a href="https://vk.com/id630721619"><p>https://vk.com/id630721619</p></a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/varlangh"><p>https://github.com/varlangh</p></a>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2025 Илья Максимчук. Все права защищены.</p>
+    </footer>
+
+Илюша, [01.11.2025 21:24]
+<script>
+      // Анимация появления элементов при скролле
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        }
+      );
+
+      // Наблюдаем за всеми элементами с классом scroll-animate
+      document.querySelectorAll(".scroll-animate").forEach((element) => {
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>
