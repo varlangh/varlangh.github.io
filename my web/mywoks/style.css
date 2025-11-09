@@ -1,0 +1,529 @@
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+    border-bottom: 2px solid white;
+}
+
+.search {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    min-width: 250px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    padding: 0.5rem 1.5rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+.search-btn:hover {
+    background: #ff5252;
+    transform: translateY(-1px);
+}
+
+/* Основной контент */
+.main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+/* Фильтры */
+.filters {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filters h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-size: 1rem;
+    min-width: 150px;
+}
+
+/* Сетка песен */
+.songs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Библиотека аккордов */
+.chord-library {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chord-library h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.chords-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.chord-category h3 {
+    margin-bottom: 1rem;
+    color: #495057;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.chords-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.chord-item {
+    background: #667eea;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-width: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chord-item:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Подвал */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 0 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.footer-section a {
+    display: block;
+    color: #bdc3c7;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding: 1rem 0;
+    text-align: center;
+    color: #bdc3c7;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .search {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .search-input {
+        min-width: auto;
+        flex: 1;
+        max-width: 300px;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .songs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chords-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .nav {
+        gap: 1rem;
+    }
+    
+    .search-input {
+        min-width: 200px;
+    }
+    
+    .filters, .chord-library {
+        padding: 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+.song-tab {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.song-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 20px;
+}
+
+.song-title {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.song-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Стили для диаграмм аккордов */
+.chords-section {
+    margin-bottom: 30px;
+}
+
+.chords-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.chord-diagram {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background: #f8f9fa;
+}
+
+.chord-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #e74c3c;
+}
+
+.chord-frets {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.chord-fret {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #adb5bd;
+    font-size: 0.8rem;
+}
+
+.chord-fingers {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    color: #495057;
+}
+
+/* Стили для текста песни */
+.song-content {
+    margin-bottom: 30px;
+}
+
+.song-part {
+    margin-bottom: 25px;
+}
+
+.part-label {
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background: #e9ecef;
+    border-radius: 3px;
+}
+
+.song-line {
+    margin-bottom: 8px;
+}
+
+.chords-line {
+    min-height: 20px;
+    margin-bottom: 2px;
+}
+
+.chord-symbol {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #e74c3c;
+    background: #fff5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.lyrics-line {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Специфичные стили для частей песни */
+.verse .lyrics-line {
+    color: #2c3e50;
+}
+
+.chorus {
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #ffc107;
+}
+
+.chorus .lyrics-line {
+    font-weight: 500;
+}
+
+.bridge {
+    background: #d1ecf1;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #17a2b8;
+}
+
+.chord-progression {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chord-progression .chord {
+    padding: 5px 10px;
+    background: #667eea;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Дополнительная информация */
+.song-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    margin-bottom: 15px;
+}
+
+.info-section h4 {
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.info-section ul {
+    padding-left: 20px;
+}
+
+.song-structure {
+    background: white;
+    padding: 10px;
+    border-radius: 3px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Инструменты */
+.song-tools {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tool-btn {
+    padding: 8px 16px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tool-btn:hover {
+    background: #5a6268;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .song-tab {
+        padding: 15px;
+    }
+    
+    .song-title {
+        font-size: 1.5rem;
+    }
+    
+    .song-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .chords-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .song-tools {
+        flex-direction: column;
+    }
+}
